@@ -5,7 +5,6 @@ import { DocumentData, FirestoreDataConverter } from "firebase-admin/firestore";
 
 import { User } from "./types/user";
 import { Queue } from "./types/queue";
-import { callback, redirect } from "./auth";
 import { summarizeEmails, triggerMessage } from "./gmail";
 import { calculateNextSend, shouldSendSummary } from "./utils";
 
@@ -65,4 +64,4 @@ export const scheduledFunction = onSchedule(
 	}
 );
 
-export { summarizeEmails, triggerMessage, callback, redirect };
+export { summarizeEmails, triggerMessage };
